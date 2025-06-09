@@ -26,5 +26,8 @@ c. with the test inside the loop that sets a boolean variable to True
 
 """
 print("Game started")
-
+word = input("Enter a word to start: ")
+print(word)
+for char in word: # It seems that the combination of 'in' and input function within a for loop will retrieve the individual element 
+    print(f"Character: {char}") # The f before the string is used for f-strings, short for formatted strings
 print("Game over")
