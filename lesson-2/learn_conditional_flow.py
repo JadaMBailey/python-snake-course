@@ -29,6 +29,16 @@ print("Game started")
 word = input("Enter a word to start: ")
 print(f"Your word is {word}")
 print("Each character is")
+points = 0
 for char in word: 
-    print(f"{char.upper()} ", end=" - ") # end="" is a parameter inside the print() function
+    print(f"{char.upper()} ", end="") # end="" is a parameter inside the print() function
+    if char.lower() == 'z':
+        points +=5
+    elif char.lower() == 'x':
+        points +=4
+    elif char.lower() in 'aeiou':
+        points += 1
+    else:
+        points +=2
+print(f"\nYour word {word} got you {points} points")
 print("\nGame over") # \n is for new line 
